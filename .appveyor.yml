@@ -50,9 +50,7 @@ install:
     - python --version
     - python -c "import struct; print(struct.calcsize('P') * 8)"
 
-    # clone a origsel/python-appveyor-demo
-    # this repo includes a simple package to test appveyor
-    - git clone git://github.com/ogrisel/python-appveyor-demo.git
+    - git clone --recursive git://github.com/pybox2d/pybox2d.git
 
 build_script:
     # Install build requirements
