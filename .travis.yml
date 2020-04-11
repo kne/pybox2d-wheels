@@ -126,4 +126,4 @@ script:
 
 after_success:
     - pip install twine
-    - twine upload --verbose --skip-existing $TRAVIS_BUILD_DIR/$REPO_DIR/dist/*.whl --repository-url https://upload.pypi.org/legacy/ -u __token__ -p $PYPI_PASSWORD
+    - twine upload --verbose --skip-existing $TRAVIS_BUILD_DIR/wheelhouse/*.whl --repository-url https://upload.pypi.org/legacy/ -u __token__ -p $PYPI_PASSWORD
