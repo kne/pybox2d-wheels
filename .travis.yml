@@ -111,7 +111,7 @@ before_install:
 install:
     # Maybe get and clean and patch source
     - clean_code $REPO_DIR $BUILD_COMMIT
-    - find -type f $TRAVIS_BUILD_DIR
+    - find $TRAVIS_BUILD_DIR
     - build_wheel $REPO_DIR $PLAT
 
 script:
