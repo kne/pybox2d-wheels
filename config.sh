@@ -4,6 +4,9 @@
 function pre_build {
     build_swig
 
+    # sigh
+    sed -i -e "s/sirkne at gmail dot com/sirkne@gmail.com/" $REPO_DIR/setup.py
+
     (cd $REPO_DIR && python setup.py build --force)
     pwd
 }

@@ -62,6 +62,10 @@ build_script:
     # build wheel:
     - cd %REPO_DIR%
     - git checkout %BUILD_COMMIT%
+
+    # sigh
+    - sed -i -e "s/sirkne at gmail dot com/sirkne@gmail.com/" setup.py
+
     - python setup.py build --force
     - python setup.py bdist_wheel
     - ls dist/*
