@@ -79,5 +79,15 @@ test_script:
     - python -c "import Box2D; print('Imported Box2D successfully')"
     - pytest -vv --pyargs Box2D.tests
 
+after_test:
+    - cmd: conda upgrade -y python
+    - >
+      # IF "%APPVEYOR_REPO_BRANCH%" == "master"
+      # (
+          python -m pip install twine &&
+          set HOME=%USERPROFILE% &&
+          echo python -m twine upload --verbose --skip-existing pybox2d\dist\*.whl --repository-url https://upload.pypi.org/legacy/ -u %PYPI_USERNAME% -p %PYPI_PASSWORD%
+      # )
+
 artifacts:
-  - path: dist\*
+    - path: pybox2d\dist\*
