@@ -54,10 +54,6 @@ install:
 
     - git clone --recursive git://github.com/pybox2d/pybox2d.git pybox2d
 
-    # Testing...
-    - echo "library/Box2D/Box2D.py" >> pybox2d/MANIFEST.in
-    - cat pybox2d/MANIFEST.in
-
 build_script:
     # Install build requirements
     - conda install -c %CONDA_CHANNEL% --yes %BUILD_DEPENDS%
