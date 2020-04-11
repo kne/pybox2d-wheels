@@ -1,17 +1,16 @@
 env:
-    global:
-        - REPO_DIR=pybox2d
-        # Commit from your-project that you want to build
-        - BUILD_COMMIT=2.3.10
-        # pip dependencies to _build_ your project
-        - BUILD_DEPENDS=""
-        # pip dependencies to _test_ your project.  Include any dependencies
-        # that you need, that are also specified in BUILD_DEPENDS, this will be
-        # a separate install.
-        - TEST_DEPENDS="pytest"
-        - UNICODE_WIDTH=32
-        - secure:
-          "uUV+vFkA/ZpZe50tmt4fw4CpLzUVrxaSt6ht/ILPdgDu2cPa+AK931Vs2awB6mpCDdT1msW1M+ObD8XsAyd5zXwjICmOqoE2hSM6F5j29FgWjTZo+kF3POfAYe4WIFvgmn7bpesWPeTQqf90uBKkcJ0F/U82/oWbptVPdYtzgt24/M42brVvvG9qowe2NQBG4FVHRffv1LvXwj6mRqF1ESCwAe24GHNx7Yi/9vU4zAfqCuxl+A+T/DiXEic8ghxzYrIer/90gWLxWCE4Qc2YuvZ8AGkq9Jl9tz/xjifm4c7byZnMCjJ69cQfijTrZbEfbPDPnPIBcYWwPrm3qKMyAL5keI9D0laMVL4yDbIHsok8UqcY5fAb6LRxFLXimsEWoxkRzmsVZCbTNp2TybX/5PMwQcqaUYbL1BElyjugx2v8h6YLVHbd+LY2YGpR6VQxj9NJlf8Mws26ZftipW9Ermy6A6i/V/aTGNWWhQ5SFa1D3wPP9xJrBRcu5uMsMblyOvQoqO3J0QRFuFaeQWfDwIqTALhxs8DH4ZFRjrQpsKb0Mhg80pH7cXK/KpYHud18YqVdLRy5ShmD4YJKR1Mw0xXHj5ahTsVK/NcXL/knhp82fd0TOsgLlP0JeDDfszYd5CS+yhV4Csk2riRv1srLf5RAl3Lwd00G9xhPZKnsxTw="
+  global:
+    - REPO_DIR=pybox2d
+    # Commit from your-project that you want to build
+    - BUILD_COMMIT=2.3.10
+    # pip dependencies to _build_ your project
+    - BUILD_DEPENDS=""
+    # pip dependencies to _test_ your project.  Include any dependencies
+    # that you need, that are also specified in BUILD_DEPENDS, this will be
+    # a separate install.
+    - TEST_DEPENDS="pytest"
+    - UNICODE_WIDTH=32
+    - secure: "uUV+vFkA/ZpZe50tmt4fw4CpLzUVrxaSt6ht/ILPdgDu2cPa+AK931Vs2awB6mpCDdT1msW1M+ObD8XsAyd5zXwjICmOqoE2hSM6F5j29FgWjTZo+kF3POfAYe4WIFvgmn7bpesWPeTQqf90uBKkcJ0F/U82/oWbptVPdYtzgt24/M42brVvvG9qowe2NQBG4FVHRffv1LvXwj6mRqF1ESCwAe24GHNx7Yi/9vU4zAfqCuxl+A+T/DiXEic8ghxzYrIer/90gWLxWCE4Qc2YuvZ8AGkq9Jl9tz/xjifm4c7byZnMCjJ69cQfijTrZbEfbPDPnPIBcYWwPrm3qKMyAL5keI9D0laMVL4yDbIHsok8UqcY5fAb6LRxFLXimsEWoxkRzmsVZCbTNp2TybX/5PMwQcqaUYbL1BElyjugx2v8h6YLVHbd+LY2YGpR6VQxj9NJlf8Mws26ZftipW9Ermy6A6i/V/aTGNWWhQ5SFa1D3wPP9xJrBRcu5uMsMblyOvQoqO3J0QRFuFaeQWfDwIqTALhxs8DH4ZFRjrQpsKb0Mhg80pH7cXK/KpYHud18YqVdLRy5ShmD4YJKR1Mw0xXHj5ahTsVK/NcXL/knhp82fd0TOsgLlP0JeDDfszYd5CS+yhV4Csk2riRv1srLf5RAl3Lwd00G9xhPZKnsxTw="
 
 # You will likely prefer "language: generic" for travis configuration,
 # rather than, say "language: python". Multibuild doesn't use
