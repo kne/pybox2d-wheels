@@ -81,13 +81,12 @@ test_script:
 
 after_test:
     - cmd: conda upgrade -y python
+    # IF "%APPVEYOR_REPO_BRANCH%" == "master"
+    # --skip-existing 
     - >
-      # IF "%APPVEYOR_REPO_BRANCH%" == "master"
-      # (
-          python -m pip install twine &&
-          set HOME=%USERPROFILE% &&
-          echo python -m twine upload --verbose --skip-existing pybox2d\dist\*.whl --repository-url https://upload.pypi.org/legacy/ -u %PYPI_USERNAME% -p %PYPI_PASSWORD%
-      # )
+        python -m pip install twine &&
+        set HOME=%USERPROFILE% &&
+        echo python -m twine upload --verbose pybox2d\dist\*.whl --repository-url https://upload.pypi.org/legacy/ -u %PYPI_USERNAME% -p %PYPI_PASSWORD%
 
 artifacts:
     - path: pybox2d\dist\*
