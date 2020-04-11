@@ -1,5 +1,6 @@
 env:
     global:
+        - REPO_DIR=pybox2d
         # Commit from your-project that you want to build
         - BUILD_COMMIT=2.3.10
         # pip dependencies to _build_ your project
@@ -103,7 +104,6 @@ matrix:
     #     - MB_PYTHON_VERSION=pypy-5.7
 
 before_install:
-    - export REPO_DIR=$TRAVIS_BUILD_DIR/pybox2d
     - source multibuild/common_utils.sh
     - source multibuild/travis_steps.sh
     - before_install

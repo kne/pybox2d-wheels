@@ -4,6 +4,7 @@
 function pre_build {
     build_swig
 
+    pwd
     cd $REPO_DIR
     python setup.py build --force
 }
