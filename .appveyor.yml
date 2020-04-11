@@ -52,7 +52,11 @@ install:
     - python --version
     - python -c "import struct; print(struct.calcsize('P') * 8)"
 
-    - git clone --recursive git://github.com/pybox2d/pybox2d.git
+    - git clone --recursive git://github.com/pybox2d/pybox2d.git pybox2d
+
+    # Testing...
+    - echo "library/Box2D/Box2D.py" >> pybox2d/MANIFEST.in
+    - cat pybox2d/MANIFEST.in
 
 build_script:
     # Install build requirements
@@ -61,6 +65,7 @@ build_script:
     # build wheel:
     - cd %REPO_DIR%
     - git checkout %BUILD_COMMIT%
+    - python setup.py build --force
     - python setup.py bdist_wheel
     - ls dist/*
 
