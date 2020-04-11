@@ -1,3 +1,5 @@
+image: Visual Studio 2015
+
 environment:
   global:
     REPO_DIR: pybox2d
@@ -8,12 +10,12 @@ environment:
     CONDA_CHANNEL: conda-forge
 
   matrix:
-    - PYTHON: "C:\\Miniconda"
-      PYTHON_VERSION: "2.7"
-      PYTHON_ARCH: "32"
-    - PYTHON: "C:\\Miniconda-x64"
-      PYTHON_VERSION: "2.7"
-      PYTHON_ARCH: "64"
+    # - PYTHON: "C:\\Miniconda"
+    #   PYTHON_VERSION: "2.7"
+    #   PYTHON_ARCH: "32"
+    # - PYTHON: "C:\\Miniconda-x64"
+    #   PYTHON_VERSION: "2.7"
+    #   PYTHON_ARCH: "64"
     - PYTHON: "C:\\Miniconda35"
       PYTHON_VERSION: "3.5"
       PYTHON_ARCH: "32"
