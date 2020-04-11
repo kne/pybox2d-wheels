@@ -4,9 +4,8 @@
 function pre_build {
     build_swig
 
+    (cd $REPO_DIR && python setup.py build --force)
     pwd
-    cd $REPO_DIR
-    python setup.py build --force
 }
 
 function run_tests {
@@ -15,4 +14,3 @@ function run_tests {
     python -c 'import sys; import Box2D'
     # pytest -vv --pyargs Box2D.tests
 }
-
