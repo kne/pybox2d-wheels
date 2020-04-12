@@ -62,7 +62,7 @@ install:
     - python --version
     - python -c "import struct; print(struct.calcsize('P') * 8)"
 
-    - git clone --recursive git://github.com/pybox2d/pybox2d.git pybox2d
+    - git clone --branch %BUILD_COMMIT% --recursive git://github.com/pybox2d/pybox2d.git pybox2d
 
 build_script:
     # Install build requirements
@@ -74,7 +74,6 @@ build_script:
 
     # build wheel:
     - cd %REPO_DIR%
-    - git checkout %BUILD_COMMIT%
 
     # sigh
     - sed -i -e "s/sirkne at gmail dot com/sirkne@gmail.com/" setup.py
