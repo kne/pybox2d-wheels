@@ -100,10 +100,8 @@ test_script:
     - pytest -vv --pyargs Box2D.tests
 
 after_test:
-    - echo Branch is: %APPVEYOR_REPO_BRANCH%
     - cmd: conda upgrade -y python
-    - >
-      IF "%APPVEYOR_REPO_BRANCH%" == "master" (
+    - IF "%APPVEYOR_REPO_BRANCH%" == "master" (
           python -m pip install twine &&
           set HOME=%USERPROFILE% &&
           python -m twine upload --verbose pybox2d\dist\*.whl --repository-url https://upload.pypi.org/legacy/ -u %PYPI_USERNAME% -p %PYPI_PASSWORD%
