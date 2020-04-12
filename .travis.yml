@@ -48,10 +48,12 @@ matrix:
       language: generic
       env:
         - MB_PYTHON_VERSION=pypy-7.3
+        - PLAT=darwin
     - os: osx
       language: generic
       env:
         - MB_PYTHON_VERSION=pypy3-7.3
+        - PLAT=darwin
     - os: osx
       env:
         - MB_PYTHON_VERSION=2.7
@@ -90,6 +92,12 @@ matrix:
       env:
         - MB_PYTHON_VERSION=3.8
         - PLAT=i686
+    - os: linux
+      env:
+        - MB_PYTHON_VERSION=pypy-7.3
+    - os: linux
+      env:
+        - MB_PYTHON_VERSION=pypy3-7.3
     - os: linux
       env: 
         - MB_PYTHON_VERSION=2.7
