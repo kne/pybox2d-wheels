@@ -2,7 +2,7 @@ env:
   global:
     - REPO_DIR=pybox2d
     # Commit from your-project that you want to build
-    - BUILD_COMMIT=2.3.10
+    - BUILD_COMMIT=new_box2d
     # pip dependencies to _build_ your project
     - BUILD_DEPENDS=""
     # pip dependencies to _test_ your project.  Include any dependencies

@@ -4,7 +4,7 @@ environment:
   global:
     REPO_DIR: pybox2d
     PACKAGE_NAME: Box2D
-    BUILD_COMMIT: 2.3.10
+    BUILD_COMMIT: new_box2d
     BUILD_DEPENDS: "swig"
     TEST_DEPENDS: "pytest"
     CONDA_CHANNEL: conda-forge
