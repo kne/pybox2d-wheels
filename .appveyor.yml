@@ -13,11 +13,11 @@ environment:
     - PYTHON: "C:\\Miniconda"
       PYTHON_VERSION: "2.7"
       PYTHON_ARCH: "32"
-      TEST_DEPENDS: "pytest=4.6"
+      TEST_DEPENDS: "pytest==4.6"
     - PYTHON: "C:\\Miniconda-x64"
       PYTHON_VERSION: "2.7"
       PYTHON_ARCH: "64"
-      TEST_DEPENDS: "pytest=4.6"
+      TEST_DEPENDS: "pytest==4.6"
     - PYTHON: "C:\\Miniconda35"
       PYTHON_VERSION: "3.5"
       PYTHON_ARCH: "32"
@@ -84,8 +84,11 @@ build_script:
 
 test_script:
     # create test env
-    - conda create --yes -c %CONDA_CHANNEL% -n test_env python=%PYTHON_VERSION% %TEST_DEPENDS%
+    - conda create --yes -c %CONDA_CHANNEL% -n test_env python=%PYTHON_VERSION%
     - activate test_env
+
+    # some issues with conda dependencies
+    - pip install %TEST_DEPENDS%
 
     # install from wheel
     - pip install --no-index --find-links dist/ %PACKAGE_NAME%
