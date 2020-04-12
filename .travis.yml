@@ -58,11 +58,11 @@ matrix:
       env:
         - MB_PYTHON_VERSION=2.7
         - MB_PYTHON_OSX_VER=10.6
-        - TEST_DEPENDS="pytest=4.6"
+        - TEST_DEPENDS="pytest==4.6"
     - os: osx
       env:
         - MB_PYTHON_VERSION=2.7
-        - TEST_DEPENDS="pytest=4.6"
+        - TEST_DEPENDS="pytest==4.6"
 
     - os: linux
       env:
@@ -101,23 +101,23 @@ matrix:
     - os: linux
       env: 
         - MB_PYTHON_VERSION=2.7
-        - TEST_DEPENDS="pytest=4.6"
+        - TEST_DEPENDS="pytest==4.6"
     - os: linux
       env:
         - MB_PYTHON_VERSION=2.7
         - UNICODE_WIDTH=16
-        - TEST_DEPENDS="pytest=4.6"
+        - TEST_DEPENDS="pytest==4.6"
     - os: linux
       env:
         - MB_PYTHON_VERSION=2.7
         - PLAT=i686
-        - TEST_DEPENDS="pytest=4.6"
+        - TEST_DEPENDS="pytest==4.6"
     - os: linux
       env:
         - MB_PYTHON_VERSION=2.7
         - PLAT=i686
         - UNICODE_WIDTH=16
-        - TEST_DEPENDS="pytest=4.6"
+        - TEST_DEPENDS="pytest==4.6"
 
 before_install:
     - source multibuild/common_utils.sh
