@@ -135,6 +135,13 @@ after_success:
     - bash miniconda.sh -b -p $HOME/miniconda
     - source "$HOME/miniconda/etc/profile.d/conda.sh"
     - hash -r && conda activate base
-
     - pip install twine
-    - twine upload --verbose --skip-existing $TRAVIS_BUILD_DIR/wheelhouse/*.whl --repository-url https://upload.pypi.org/legacy/ -u __token__ -p $PYPI_PASSWORD
+    # List the wheels
+    - ls $TRAVIS_BUILD_DIR/wheelhouse/*.whl
+
+    - >
+      if [ "$TRAVIS_BRANCH" == "master" ]; then
+        twine upload --verbose --skip-existing $TRAVIS_BUILD_DIR/wheelhouse/*.whl --repository-url https://upload.pypi.org/legacy/ -u __token__ -p $PYPI_PASSWORD;
+      else
+        echo "Not deploying until on master branch ($TRAVIS_BRANCH)";
+      fi
