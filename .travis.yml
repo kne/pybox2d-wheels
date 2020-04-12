@@ -41,10 +41,6 @@ matrix:
     - os: osx
       env:
         - MB_PYTHON_VERSION=3.7
-        - MB_PYTHON_OSX_VER=10.6
-    - os: osx
-      env:
-        - MB_PYTHON_VERSION=3.7
     - os: osx
       env:
         - MB_PYTHON_VERSION=3.8
