@@ -69,6 +69,8 @@ build_script:
     - conda create --yes -c %CONDA_CHANNEL% -n build_env python=%PYTHON_VERSION% %BUILD_DEPENDS%
     - activate build_env
 
+    - pip install --upgrade pip wheel setuptools
+
     # build wheel:
     - cd %REPO_DIR%
     - git checkout %BUILD_COMMIT%
